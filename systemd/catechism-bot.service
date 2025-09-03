@@ -1,0 +1,15 @@
+[Unit]
+Description=Discord Catechism Bot
+After=network.target
+
+[Service]
+Type=simple
+User=YOUR_USERNAME
+WorkingDirectory=/path/to/discord-catechism-bot
+ExecStart=/path/to/discord-catechism-bot/venv/bin/python /path/to/discord-catechism-bot/bot.py
+Restart=always
+RestartSec=10
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
